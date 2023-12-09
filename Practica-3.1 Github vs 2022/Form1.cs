@@ -20,7 +20,7 @@ namespace Practica_3._1_Github_vs_2022
         private void bCalcular_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
-            char tipoTelegrama = ' ';//CGG2324
+            char tipoTelegrama = 'o';//CGG2324
             int numPalabras = 0;
             double coste;
             //Leo el telegrama
@@ -29,11 +29,11 @@ namespace Practica_3._1_Github_vs_2022
             if (cbUrgente.Checked)
                 tipoTelegrama = 'u';
             //Obtengo el número de palabras que forma el telegrama
-            numPalabras = textoTelegrama.Length;
+            numPalabras = textoTelegrama.Split(' ',',','.',';').Length;
             //Si el telegrama es ordinario
             if (tipoTelegrama == 'o')
                 if (numPalabras <= 10)
-                    coste = 25;
+                    coste = 2.5;
                 else
                     coste = 0.5 * numPalabras;//CGG2324
             else
