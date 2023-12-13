@@ -42,7 +42,7 @@ namespace Practica_3._1_Github_vs_2022
             //Si el telegrama es urgente
             if (tipoTelegrama == 'u')
                 if (numPalabras <= 10)
-                    coste = 5;
+                    coste = 10;
                 else
                     coste = 5 + 0.75 * (numPalabras - 10);
             else
